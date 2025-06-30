@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Fajri & Lily</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffffff);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    h1, h2 {
+      font-family: 'Great Vibes', cursive;
+      color: #c2185b;
+    }
+    h3 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #ad1457;
+    }
+    #cover {
+      height: 100vh;
+      background: radial-gradient(circle at top, #ffcde4, #ffe3ef);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      transition: opacity 1s ease;
+      z-index: 10;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+    #cover.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #cover h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+    }
+    #cover p {
+      font-size: 1.3em;
+      color: #7b1c48;
+      margin-bottom: 30px;
+    }
+    #cover button {
+      background: linear-gradient(45deg, #ec407a, #d81b60);
+      color: white;
+      padding: 14px 35px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    #cover button:hover {
+      background: #c2185b;
+      transform: scale(1.05);
+    }
+    header {
+      padding: 40px 20px;
+      background: #ffd6e8;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .section {
+      padding: 50px 20px;
+      max-width: 850px;
+      margin: auto;
+    }
+    .section p {
+      font-size: 1.1em;
+      line-height: 1.8em;
+      color: #4a4a4a;
+    }
+    blockquote {
+      font-style: italic;
+      background: #ffeef5;
+      padding: 20px;
+      border-left: 5px solid #ec407a;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+    .couple {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-top: 30px;
+    }
+    .couple img {
+      width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+    }
+    .couple img:hover {
+      transform: scale(1.05);
+    }
+    .btn {
+      background: #d81b60;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      font-size: 1em;
+      border-radius: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #ad1457;
+    }
+    input, textarea {
+      width: 90%;
+      max-width: 400px;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1.5px solid #f8a7c3;
+      border-radius: 10px;
+      font-size: 1em;
+      font-family: 'Quicksand', sans-serif;
+    }
+    #timer {
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #880e4f;
+      margin-top: 20px;
+      background: #ffe3ef;
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    footer {
+      padding: 25px;
+      background: #ffd6e8;
+      font-size: 0.95em;
+      color: #333;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="cover">
+    <h1>Undangan Khusus<br>Pernikahan Fajri & Lily</h1>
+    <p>Dengan Cinta, Kami Undang Kehadiranmu</p>
+    <button onclick="bukaUndangan()">Buka Undangan</button>
+  </div>
+
+  <div id="main" style="display:none">
+    <audio autoplay loop hidden>
+      <source src="Seventeen.mp3" type="audio/mpeg">
+    </audio>
+
+    <header data-aos="fade-down">
+      <h2>Fajri & Lily</h2>
+      <p>29 Desember 2025 - Theater JKT48</p>
+    </header>
+
+    <div class="section" data-aos="fade-up">
+      <h3>Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
+      <p>Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami.</p>
+    </div>
+
+    <div class="section" data-aos="fade-up">
+      <blockquote>
+        <em>“Dan di antara tanda-tanda kekuasaan-Nya adalah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri...”</em><br>
+        <strong>(QS. Ar-Rum: 21)</strong>
+      </blockquote>
+    </div>
+
+    <div class="couple section" data-aos="zoom-in">
+      <div>
+        <img src="kabesha_fajri.jpg" alt="Fajri">
+        <p><strong>Muhammad Fajri Hidayatullah</strong></p>
+      </div>
+      <div>
+        <img src="kabesha_lily.jpg" alt="Lily">
+        <p><strong>Hillary Abigail Mantiri</strong></p>
+      </div>
+    </div>
+
+    <div class="section" data-aos="fade-up">
+      <h3>Countdown</h3>
+      <p id="timer">Loading...</p>
+    </div>
+
+    <div class="section" data-aos="fade-up">
+      <h3>Tentang Kami</h3>
+      <p>Kisah kami dimulai dari pertemuan sederhana yang tak pernah kami sangka akan tumbuh menjadi cinta sejati. Hari demi hari, kami saling mengenal, menerima, dan saling melengkapi kekurangan satu sama lain.</p>
+      <p>Fajri, seorang lelaki penuh semangat dan impian, dan Lily, sosok perempuan lembut yang penuh kasih. Kami menyadari bahwa cinta bukan hanya tentang rasa, tapi tentang perjuangan untuk terus tumbuh bersama.</p>
+      <p>Perjalanan kami tidak selalu mulus, tapi setiap tantangan justru membuat kami semakin kuat. Kami belajar bahwa kebersamaan adalah tentang memahami dan bertumbuh bersama.</p>
+      <p>Dengan segala rasa syukur dan cinta yang mendalam, kami memutuskan untuk melangkah ke jenjang yang lebih serius, mengikat janji suci di hadapan Allah dan orang-orang tercinta.</p>
+      <p>Hari ini, kami ingin membagikan momen bahagia ini bersama kalian semua. Doa dan kehadiran kalian sangat berarti bagi perjalanan baru kami.</p>
+    </div>
+
+    <div class="section" data-aos="fade-up">
+      <h3>Kirim Ucapan</h3>
+      <form onsubmit="event.preventDefault(); alert('Ucapan berhasil dikirim!');">
+        <input type="text" placeholder="Nama kamu" required><br>
+        <textarea rows="4" placeholder="Tulis ucapan..." required></textarea><br>
+        <button class="btn" type="submit">Kirim</button>
+      </form>
+    </div>
+
+    <div class="section" data-aos="fade-up">
+      <h3>Dukungan Dana</h3>
+      <p>Kirim ke Dana: <b>083815423928</b><br>a.n. Fajri</p>
+    </div>
+
+    <footer data-aos="fade-up">
+      © 2025 Fajri & Lily. All love reserved.
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    function bukaUndangan() {
+      const cover = document.getElementById("cover");
+      const main = document.getElementById("main");
+      cover.classList.add("hidden");
+      setTimeout(() => {
+        cover.style.display = "none";
+        main.style.display = "block";
+      }, 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const countDownDate = new Date("December 29, 2025 00:00:00").getTime();
+      const timer = document.getElementById("timer");
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        if (distance <= 0) {
+          timer.innerHTML = "Hari Pernikahan Telah Tiba!";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        timer.innerHTML = `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  </script>
+
+</body>
+</html>
